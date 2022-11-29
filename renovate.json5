@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dependencyDashboard": true,
+  "regexManagers": [
+     {
+       "fileMatch": ".*\\.ya?ml",
+       "matchStrings": [
+         "name: \"renovate-(?<currentValue>.*)\""
+       ],
+       "datasourceTemplate": "github-releases",
+       "depNameTemplate": "renovatebot/renovate",
+       "versioningTemplate": "loose",
+       "extractVersionTemplate": "{{{ replace '.' '_' version }}}"
+     },
+   ]
+}
